@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Multer File Upload</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    </head>
+    <body>
+       
+        <header>
+            <h1>Multer</h1>
+            <h2>Homepage</h2>
+        </header>
+
+        <div class = "container">
+        <p>File Upload</p>
+        <%= typeof msg != 'undefined' ? msg : '' %>
+        <form action="/upload" method = "POST" enctype = "multipart/form-data">
+            <div class="file-field input-field">
+                
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" name = "myImage">
+                </div>
+
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                 </div>
+            </div>
+            <button type = "submit" class = "btn-grey">Send/Submit</button> 
+        </form>
+        
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    </body>
+</html>
